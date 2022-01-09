@@ -1,0 +1,127 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Cycler Data: Overview</title>
+		<link rel = "stylesheet" type = "text/css" href = "../styles/styles.css" />
+		<link rel = "icon" type = "image/ico" href = "../Images/icon.ico" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+	</head>
+
+	<body>
+		<table style="width:100%;">
+			<tr>
+				<td class="sideTd" style="width:10%;" rowspan=2></td>
+				<td></td>
+				<td class="sideTd" style="width:10%;" rowspan=2></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td class="centerTd" style="width:80%;">
+					<div style="width:33.3%; float: left;">
+							<h4>Station 1</h4>
+							<label>Connection: <span id="s1Connection" class="offline">Offline</span><br/></label>
+							<label>Status: <span id="s1Status" class="offline">Offline</span><br/></label>
+							<ul>
+								<li>Model: <span id="s1Model">FBP-####</span></li>
+								<li>Serial #: <span id="s1Serial">########</</span></li>
+								<li>State: <span id="s1State">#######</</span></li>
+								<li>State Time: <span id="s1STime">00:00:00</span></li>
+								<li>Total Time: <span id="s1TTime">00:00:00</span></li>
+								<li>Voltage: <span id="s1Voltage">###### V</span></li>
+								<li>Current: <span id="s1Current">###### A</span></li>
+							</ul>
+							<div id="refS1"></div>
+						
+							<h4>Station 4</h4>
+							<label>Connection: <span id="s4Connection" class="offline">Offline</span><br/></label>
+							<label>Status: <span id="s4Status" class="offline">Offline</span><br/></label>
+							<ul>
+								<li>Model: <span id="s4Model">FBP-####</span></li>
+								<li>Serial #: <span id="s4Serial">########</span></li>
+								<li>State: <span id="s4State">#######</span></li>
+								<li>State Time: <span id="s4STime">00:00:00</span></li>
+								<li>Total Time: <span id="s4TTime">00:00:00</span></li>
+								<li>Voltage: <span id="s4Voltage">###### V</span></li>
+								<li>Current: <span id="s4Current">###### A</span></li>
+							</ul>
+							<div id="refS4"></div>
+					</div>
+					
+					<div style="width:33.3%; float: left;">
+							<h4>Station 2</h4>
+							<label>Connection: <span id="s2Connection" class="offline">Offline</span><br/></label>
+							<label>Status: <span id="s2Status" class="offline">Offline</span><br/></label>
+							<ul>
+								<li>Model: <span id="s2Model">FBP-####</span></li>
+								<li>Serial #: <span id="s2Serial">########</span></li>
+								<li>State: <span id="s2State">#######</span></li>
+								<li>State Time: <span id="s2STime">00:00:00</span></li>
+								<li>Total Time: <span id="s2TTime">00:00:00</span></li>
+								<li>Voltage: <span id="s2Voltage">###### V</span></li>
+								<li>Current: <span id="s2Current">###### A</span></li>
+							</ul>
+							<div id="refS2"></div>
+						
+							<h4>Station 5</h4>
+							<label>Connection: <span id="s5Connection" class="offline">Offline</span><br/></label>
+							<label>Status: <span id="s5Status" class="offline">Offline</span><br/></label>
+							<ul>
+								<li>Model: <span id="s5Model">FBP-####</span></li>
+								<li>Serial #: <span id="s5Serial">########</span></li>
+								<li>State: <span id="s5State">#######</span></li>
+								<li>State Time: <span id="s5STime">00:00:00</span></li>
+								<li>Total Time: <span id="s5TTime">00:00:00</span></li>
+								<li>Voltage: <span id="s5Voltage">###### V</span></li>
+								<li>Current: <span id="s5Current">###### A</span></li>
+							</ul>
+							<div id="refS5"></div>
+					</div>
+					
+					<div style="width:33.3%; float: left;">
+							<h4>Station 3</h4>
+							<label>Connection: <span id="s3Connection" class="offline">Offline</span><br/></label>
+							<label>Status: <span id="s3Status" class="offline">Offline</span><br/></label>
+							<ul>
+								<li>Model: <span id="s3Model">FBP-####</span></li>
+								<li>Serial #: <span id="s3Serial">########</span></li>
+								<li>State: <span id="s3State">#######</span></li>
+								<li>State Time: <span id="s3STime">00:00:00</span></li>
+								<li>Total Time: <span id="s3TTime">00:00:00</span></li>
+								<li>Voltage: <span id="s3Voltage">###### V</span></li>
+								<li>Current: <span id="s3Current">###### A</span></li>
+							</ul>
+							<div id="refS3"></div>
+							
+							<h4>Station 6</h4>
+							<label>Connection: <span id="s6Connection" class="offline">Offline</span><br/></label>
+							<label>Status: <span id="s6Status" class="offline">Offline</span><br/></label>
+							<ul>
+								<li>Model: <span id="s6Model">FBP-####</span></li>
+								<li>Serial #: <span id="s6Serial">########</span></li>
+								<li>State: <span id="s6State">#######</span></li>
+								<li>State Time: <span id="s6STime">00:00:00</span></li>
+								<li>Total Time: <span id="s6TTime">00:00:00</span></li>
+								<li>Voltage: <span id="s6Voltage">###### V</span></li>
+								<li>Current: <span id="s6Current">###### A</span></li>
+							</ul>
+							<div id="refS6"></div>
+					</div>
+				</td>
+				<td class="sideTd"></td>
+			</tr>
+		</table>
+		<script type="text/javascript">
+			refresh();
+			var refreshAll = setInterval(refresh, 3000);
+			function refresh(){
+				var d = new Date();
+				$('#refS1').load('../data/php/allRefresh.php?req=2&s-ID=1' + '&f-ID=1' + '&ts=' + d.getTime());
+				$('#refS1').load('../data/php/allRefresh.php?req=2&s-ID=2' + '&f-ID=2' + '&ts=' + d.getTime());
+				$('#refS1').load('../data/php/allRefresh.php?req=2&s-ID=3' + '&f-ID=3' + '&ts=' + d.getTime());
+				$('#refS1').load('../data/php/allRefresh.php?req=2&s-ID=4' + '&f-ID=4' + '&ts=' + d.getTime());
+				$('#refS1').load('../data/php/allRefresh.php?req=2&s-ID=5' + '&f-ID=5' + '&ts=' + d.getTime());
+				$('#refS1').load('../data/php/allRefresh.php?req=2&s-ID=6' + '&f-ID=6' + '&ts=' + d.getTime());
+			}
+		</script>
+	</body>
+</html>

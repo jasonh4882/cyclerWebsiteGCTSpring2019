@@ -1,0 +1,461 @@
+<!DOCTYPE HTML>
+
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Cycler Data: Overview</title>
+		 <link rel = "stylesheet" type = "text/css" href = "styles/styles.css" />
+		<link rel = "icon" type = "image/ico" href = "Images/icon.ico" />	
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+		
+		<script src="Scripts/Chart.js"></script>
+		<link rel = "stylesheet" type = "text/css" href = "styles/Chart.css" />
+		
+		</head>
+
+	<body>
+		<table style="width:100%">
+			<tr>
+				<td class="sideTd" rowspan=2></td>
+				<td class="sideTd" id="navBar" rowspan=2>
+					<a href="https://greencubestech.com/">
+						<img src="Images/greencubeslogo.png" alt="green cubes logo" width="100"/>
+					</a>
+					<labl><span id="nowTime">12:00:00 AM</span></label>
+					<br/>
+					<br/>
+					<br/>
+					<labl><a class="navLink" href="index.htm">Overview</a></label><br/>
+					<labl><a class="navLink stationNav" href="pages/station.php?station=1">Station 1</a></label><br/>
+					<labl><a class="navLink stationNav" href="pages/station.php?station=2">Station 2</a></label><br/>
+					<labl><a class="navLink stationNav" href="pages/station.php?station=3">Station 3</a></label><br/>
+					<labl><a class="navLink stationNav" href="pages/station.php?station=4">Station 4</a></label><br/>
+					<labl><a class="navLink stationNav" href="pages/station.php?station=5">Station 5</a></label><br/>
+					<labl><a class="navLink stationNav" href="pages/station.php?station=6">Station 6</a></label><br/>
+					<labl><a class="navLink" href="pages/entry.php">Remote Start</a></label><br/>
+					<labl><a class="navLink" href="pages/lookup.php">Battery Lookup</a></label><br/>
+					<labl><a class="navLink" href="pages/about.php">About</a></label><br/>
+				</td>
+				<td>
+					<div id="cyclerHeading">Station Overview</div>
+				</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td class="centerTd">
+					<div class="row">
+							
+
+					
+					</div>
+					<div class="row">
+						<div class= "stationleft">
+									<span class= "viewcontentleft">
+											<h3>Station 1</h3>
+									<div class="rowdetails">											
+										 <canvas id="ChartS1">Error</canvas>
+												
+									</div>
+									<div class="rowdetails">	
+										<div class="columndetails">
+											<h4>Battery Information</h4><ul>
+											<li>Model: <span id="s1Model">FBP-###</span></li>
+											<li>Serial: <span id="s1Serial">#######</span></li>
+											<li>Voltage: <span id="s1Volt"># V </span></li>
+											<li>Capacity: <span id="s1Cap"># Ah</span></li>
+											<li># of cells: <span id="s1Cells">#</span></li></ul>
+										</div>											
+										<div class="columndetails">										
+											<h4>Cycle Information</h4><ul>
+											<li>State: <span id="s1State">######</span></li>
+											<li>State Time: <span id="s1STime">00:00:0</span></li>
+											<li>Temperature: <span id="s1Temp">###&#8451</span></li>
+											<li>Voltage: <span id="s1Voltage">##### V</span></li>
+											<li>Current: <span id="s1Current">##### A</span></li>
+											</ul>
+										</div>
+									</div>	
+									<div class="rowdetails">								
+										<div class="columndetails">
+											<h4>Resistor Temps</h4>
+											<ul>
+											<li> <span id="s1rTemp">###&#8451</span></li>
+											<li> <span id="s1rTemp2">###&#8451</span></li></ul>	
+										</div>
+										<div class="columndetails">
+											<h4>State Times</h4><ul>
+											<li>1st Discharge: <span id="s1Discharge1">00:00:0</span></li>
+											<li>Discharge Wait: <span id="s1DischargeWait1">00:00:0</span></li>
+											<li>1st Bulk Charge: <span id="s1BulkCharge1">00:00:0</span></li>
+											<li>Charge Wait: <span id="s1ChargeWait">00:00:0</span></li>
+											<li>2nd Discharge: <span id="s1Discharge2">00:00:0</span></li>
+											<li>Discharge Wait: <span id="s1DischargeWait2">00:00:0</span></li>
+											<li>2nd Bulk Charge: <span id="s1BulkCharge2">00:00:0</span></li>
+											<li>Finish Charge: <span id="s1FinishCharge2">00:00:0</span></li>
+											</ul>
+										</div>	
+									</div>
+								</span>				
+							<h3>Station 1</h3>
+							<lable>Connection: <span id="s1Connection" class="offline">Offline</span><br/></label>
+							<lable>Status: <span id="s1Status" class="offline">Offline</span><br/></label>
+							<h4>Current Cycling<br/> Information<br/></h4>
+							<ul>
+								<li>Model: <span id="s1rModel">FBP-###</span></li>
+								<li>State: <span id="s1rState">######</</span></li>
+								<li>Cycle Time: <span id="s1TTime">00:00:0</span></li>
+								<li>Est Time: <span id="s1TCycle">00:00:0</span></li>
+								
+							</ul>
+							
+							<div id="refS1"></div>
+							<hr/>								
+						</div>								
+						<div class= "stationright">
+								<span class= "viewcontentright">
+											<h3>Station 2</h3>
+									<div class="rowdetails">
+											<canvas id="ChartS2">Error</canvas>
+									</div>
+									<div class="rowdetails">
+										<div class="columndetails">							
+											<h4>Battery Information</h4><ul>
+											<li>Model: <span id="s2Model">FBP-###</span></li>
+											<li>Serial: <span id="s2Serial">#######</span></li>
+											<li>Voltage: <span id="s2Volt"># V </span></li>
+											<li>Capacity: <span id="s2Cap"># Ah</span></li>
+											<li># of cells: <span id="s2Cells">#</span></li></ul>
+										</div>
+										<div class="columndetails">										
+											<h4>Cycle Information</h4><ul>
+											<li>State: <span id="s2State">######</span></li>
+											<li>State Time: <span id="s2STime">00:00:0</span></li>
+											<li>Temperature: <span id="s2Temp">###&#8451</span></li>
+											<li>Voltage: <span id="s2Voltage">##### V</span></li>
+											<li>Current: <span id="s2Current">##### A</span></li>
+											</ul>
+										</div>
+									</div>
+									<div class="rowdetails">
+										<div class="columndetails">
+											<h4>Resistor Temps</h4><ul>
+											<li> <span id="s2rTemp">###&#8451</span></li>
+											<li> <span id="s2rTemp2">###&#8451</span></li></ul>
+										</div>
+										<div class="columndetails">
+											<h4>State Times</h4><ul>
+											<li>1st Discharge: <span id="s2Discharge1">00:00:0</span></li>
+											<li>Discharge Wait: <span id="s2DischargeWait1">00:00:0</span></li>
+											<li>1st Bulk Charge: <span id="s2BulkCharge1">00:00:0</span></li>
+											<li>Charge Wait: <span id="s2ChargeWait">00:00:0</span></li>
+											<li>2nd Discharge: <span id="s2Discharge2">00:00:0</span></li>
+											<li>Discharge Wait: <span id="s2DischargeWait2">00:00:0</span></li>
+											<li>2nd Bulk Charge: <span id="s2BulkCharge2">00:00:0</span></li>
+											<li>Finish Charge: <span id="s2FinishCharge2">00:00:0</span></li>
+											</ul>
+										</div>				
+									</div>
+								</span>
+							<h3>Station 2</h3>
+							<lable>Connection: <span id="s2Connection" class="offline">Offline</span><br/></label>
+							<lable>Status: <span id="s2Status" class="offline">Offline</span><br/></label>
+							<h4>Current Cycling<br/> Information<br/></h4>
+							<ul>
+								<li>Model: <span id="s2rModel">FBP-###</span></li>
+								<li>State: <span id="s2rState">######</span></li>
+								<li>Cycle Time: <span id="s2TTime">00:00:0</span></li>
+								<li>Est Time: <span id="s2TCycle">00:00:0</span></li>
+							</ul>
+							<div id="refS2"></div>
+							<hr/>
+						</div>
+					</div>					
+					<div class="row">
+						<div class= "stationleft">
+								<span class= "viewcontentleft">
+											<h3>Station 3</h3>
+									<div class="rowdetails">
+											<canvas id="ChartS3">Error</canvas>
+									</div>
+									<div class="rowdetails">
+										<div class="columndetails">								
+											<h4>Battery Information</h4><ul>
+											<li>Model: <span id="s3Model">FBP-###</span></li>
+											<li>Serial: <span id="s3Serial">#######</span></li>
+											<li>Voltage: <span id="s3Volt"># V </span></li>
+											<li>Capacity: <span id="s3Cap"># Ah</span></li>
+											<li># of cells: <span id="s3Cells">#</span></li></ul>
+										</div>
+										<div class="columndetails">
+											<h4>Cycle Information</h4><ul>
+											<li>State: <span id="s3State">######</span></li>
+											<li>State Time: <span id="s3STime">00:00:0</span></li>
+											<li>Temperature: <span id="s3Temp">###&#8451</span></li>
+											<li>Voltage: <span id="s3Voltage">##### V</span></li>
+											<li>Current: <span id="s3Current">##### A</span></li>
+											</ul>
+										</div>
+									</div>	
+									<div class="rowdetails">	
+										<div class="columndetails">	
+											<h4>Resistor Temps</h4>
+											<ul>
+											<li> <span id="s3rTemp">###&#8451</span></li>
+											<li> <span id="s3rTemp2">###&#8451</span></li></ul>
+										</div>
+										<div class="columndetails">
+											<h4>State Times</h4><ul>
+											<li>1st Discharge: <span id="s3Discharge1">00:00:0</span></li>
+											<li>Discharge Wait: <span id="s3DischargeWait1">00:00:0</span></li>
+											<li>1st Bulk Charge: <span id="s3BulkCharge1">00:00:0</span></li>
+											<li>Charge Wait: <span id="s3ChargeWait">00:00:0</span></li>
+											<li>2nd Discharge: <span id="s3Discharge2">00:00:0</span></li>
+											<li>Discharge Wait: <span id="s3DischargeWait2">00:00:0</span></li>
+											<li>2nd Bulk Charge: <span id="s3BulkCharge2">00:00:0</span></li>
+											<li>Finish Charge: <span id="s3FinishCharge2">00:00:0</span></li>
+											</ul>
+										</div>
+									</div>
+								</span>		   
+							<h3>Station 3</h3>
+							<lable>Connection: <span id="s3Connection" class="offline">Offline</span><br/></label>
+							<lable>Status: <span id="s3Status" class="offline">Offline</span><br/></label>
+							<h4>Current Cycling<br/> Information<br/></h4>
+							<ul>
+								<li>Model: <span id="s3rModel">FBP-###</span></li>
+								<li>State: <span id="s3rState">######</span></li>
+								<li>Cycle Time: <span id="s3TTime">00:00:0</span></li>
+								<li>Est Time: <span id="s3TCycle">00:00:0</span></li>
+							</ul>
+							<div id="refS3"></div>
+							<hr/>
+						</div>						
+						<div class= "stationright">
+								<span class= "viewcontentright">
+											<h3>Station 4</h3>
+									<div class="rowdetails">
+											<canvas id="ChartS4">Error</Canvas>
+									</div>
+									<div class="rowdetails">
+										<div class="columndetails">
+											<h4>Battery Information</h4><ul>
+											<li>Model: <span id="s4Model">FBP-###</span></li>
+											<li>Serial: <span id="s4Serial">#######</span></li>
+											<li>Voltage: <span id="s4Volt"># V </span></li>
+											<li>Capacity: <span id="s4Cap"># Ah</span></li>
+											<li># of cells: <span id="s4Cells">#</span></li></ul>
+										</div>
+										<div class="columndetails">
+											<h4>Cycle Information</h4><ul>
+											<li>State: <span id="s4State">######</span></li>
+											<li>State Time: <span id="s4STime">00:00:0</span></li>
+											<li>Temperature: <span id="s4Temp">###&#8451</span></li>
+											<li>Voltage: <span id="s4Voltage">##### V</span></li>
+											<li>Current: <span id="s4Current">##### A</span></li>
+											</ul>
+										</div>
+									</div>	
+									<div class="rowdetails">
+										<div class="columndetails">
+											<h4>Resistor Temps</h4>
+											<ul>
+											<li> <span id="s4rTemp">###&#8451</span></li>
+											<li> <span id="s4rTemp2">###&#8451</span></li></ul>
+										</div>											
+										<div class="columndetails">
+											<h4>State Times</h4><ul>
+											<li>1st Discharge: <span id="s4Discharge1">00:00:0</span></li>
+											<li>Discharge Wait: <span id="s4DischargeWait1">00:00:0</span></li>
+											<li>1st Bulk Charge: <span id="s4BulkCharge1">00:00:0</span></li>
+											<li>Charge Wait: <span id="s4ChargeWait">00:00:0</span></li>
+											<li>2nd Discharge: <span id="s4Discharge2">00:00:0</span></li>
+											<li>Discharge Wait: <span id="s4DischargeWait2">00:00:0</span></li>
+											<li>2nd Bulk Charge: <span id="s4BulkCharge2">00:00:0</span></li>
+											<li>Finish Charge: <span id="s4FinishCharge2">00:00:0</span></li>
+											</ul>
+										</div>
+									</div>
+								</span>
+							<h3>Station 4</h3>
+							<lable>Connection: <span id="s4Connection" class="offline">Offline</span><br/></label>
+							<lable>Status: <span id="s4Status" class="offline">Offline</span><br/></label>
+							<h4>Current Cycling<br/> Information<br/></h4>
+							<ul>
+								<li>Model: <span id="s4rModel">FBP-###</span></li>
+								<li>State: <span id="s4rState">######</span></li>
+								<li>Cycle Time: <span id="s4TTime">00:00:0</span></li>
+								<li>Est Time: <span id="s4TCycle">00:00:0</span></li>
+							</ul>
+							<div id="refS4"></div>
+							<hr/>
+						</div>
+					</div>					
+					<div class="row">
+						<div class= "stationleft">
+								<span class= "viewcontentleft">
+											<h3>Station 5</h3>
+									<div class="rowdetails">
+											<canvas id="ChartS5">Error</canvas>
+									</div>
+									<div class="rowdetails">
+										<div class="columndetails">								
+											<h4>Battery Information</h4><ul>
+											<li>Model: <span id="s5Model">FBP-###</span></li>
+											<li>Serial: <span id="s5Serial">#######</span></li>
+											<li>Voltage: <span id="s5Volt"># V </span></li>
+											<li>Capacity: <span id="s5Cap"># Ah</span></li>
+											<li># of cells: <span id="s5Cells">#</span></li></ul>
+										</div>
+										<div class="columndetails">										
+											<h4>Cycle Information</h4><ul>
+											<li>State: <span id="s5State">######</span></li>
+											<li>State Time: <span id="s5STime">00:00:0</span></li>
+											<li>Temperature: <span id="s5Temp">###&#8451</span></li>
+											<li>Voltage: <span id="s5Voltage">##### V</span></li>
+											<li>Current: <span id="s5Current">##### A</span></li>
+											</ul>
+										</div>								
+									</div>
+									<div class="rowdetails">
+										<div class="columndetails">
+											<h4>Resistor Temps</h4>
+											<ul>
+											<li> <span id="s5rTemp">###&#8451</span></li>
+											<li> <span id="s5rTemp2">###&#8451</span></li></ul>
+										</div>
+										<div class="columndetails">
+											<h4>State Times</h4><ul>
+											<li>1st Discharge: <span id="s5Discharge1">00:00:0</span></li>
+											<li>Discharge Wait: <span id="s5DischargeWait1">00:00:0</span></li>
+											<li>1st Bulk Charge: <span id="s5BulkCharge1">00:00:0</span></li>
+											<li>Charge Wait: <span id="s5ChargeWait">00:00:0</span></li>
+											<li>2nd Discharge: <span id="s5Discharge2">00:00:0</span></li>
+											<li>Discharge Wait: <span id="s5DischargeWait2">00:00:0</span></li>
+											<li>2nd Bulk Charge: <span id="s5BulkCharge2">00:00:0</span></li>
+											<li>Finish Charge: <span id="s5FinishCharge2">00:00:0</span></li>
+											</ul>
+										</div>
+									</div>
+								</span>
+							<h3>Station 5</h3>
+							<lable>Connection: <span id="s5Connection" class="offline">Offline</span><br/></label>
+							<lable>Status: <span id="s5Status" class="offline">Offline</span><br/></label>
+							<h4>Current Cycling<br/> Information<br/></h4>
+							<ul>
+								<li>Model: <span id="s5rModel">FBP-###</span></li>
+								<li>State: <span id="s5rState">######</span></li>
+								<li>Cycle Time: <span id="s5TTime">00:00:0</span></li>
+								<li>Est Time: <span id="s5TCycle">00:00:0</span></li>
+							</ul>
+							<div id="refS5"></div>
+							<hr/>
+						</div>
+
+						<div class= "stationright">											
+								<span class= "viewcontentright">
+											<h3>Station 6</h3>
+									<div class="rowdetails">													
+										 <canvas id="ChartS6">Error</canvas>
+									</div>
+									<div class="rowdetails">
+										<div class="columndetails">							
+											<h4>Battery Information</h4><ul>
+											<li>Model: <span id="s6Model">FBP-###</span></li>
+											<li>Serial: <span id="s6Serial">#######</span></li>
+											<li>Voltage: <span id="s6Volt"># V </span></li>
+											<li>Capacity: <span id="s6Cap"># Ah</span></li>
+											<li># of cells: <span id="s6Cells">#</span></li></ul>
+										</div>										
+										<div class="columndetails">											
+											<h4>Cycle Information</h4><ul>
+											<li>State: <span id="s6State">######</span></li>
+											<li>State Time: <span id="s6STime">00:00:0</span></li>
+											<li>Temperature: <span id="s6Temp">###&#8451</span></li>
+											<li>Voltage: <span id="s6Voltage">##### V</span></li>
+											<li>Current: <span id="s6Current">##### A</span></li>
+											</ul>
+										</div>
+									</div>	
+									<div class="rowdetails">										
+										<div class="columndetails">
+											<h4>Resistor Temps</h4><ul>
+											<li> <span id="s6rTemp">###&#8451</span></li>
+											<li> <span id="s6rTemp2">###&#8451</span></li></ul>
+										</div>										
+										<div class="columndetails">
+											<h4>State Times</h4><ul>
+											<li>1st Discharge: <span id="s6Discharge1">00:00:0</span></li>
+											<li>Discharge Wait: <span id="s6DischargeWait1">00:00:0</span></li>
+											<li>1st Bulk Charge: <span id="s6BulkCharge1">00:00:0</span></li>
+											<li>Charge Wait: <span id="s6ChargeWait">00:00:0</span></li>
+											<li>2nd Discharge: <span id="s6Discharge2">00:00:0</span></li>
+											<li>Discharge Wait: <span id="s6DischargeWait2">00:00:0</span></li>
+											<li>2nd Bulk Charge: <span id="s6BulkCharge2">00:00:0</span></li>
+											<li>Finish Charge: <span id="s6FinishCharge2">00:00:0</span></li>
+											</ul>
+										</div>
+									</div>
+								</span>
+							<h3>Station 6</h3>
+							<lable>Connection: <span id="s6Connection" class="offline">Offline</span><br/></label>
+							<lable>Status: <span id="s6Status" class="offline">Offline</span><br/></label>
+							<h4>Current Cycling<br/> Information<br/></h4>
+							<ul>
+								<li>Model: <span id="s6rModel">FBP-###</span></li>
+								<li>State: <span id="s6rState">######</span></li>
+								<li>Cycle Time: <span id="s6TTime">00:00:0</span></li>
+								<li>Est Time: <span id="s6TCycle">00:00:0</span></li>
+							</ul>
+							<div id="refS6"></div>							
+							<hr/>								
+						</div>					
+					</div>							
+				</td>				
+				<td class="sideTd"></td>
+				
+			</tr>
+		
+		</table>
+		<script type="text/javascript">
+		
+			refresh();
+			var refreshAll = setInterval(refresh, 1000);
+			function refresh(){
+				var d = new Date();
+				var t = d.toLocaleTimeString();
+				document.getElementById("nowTime").innerHTML = t;
+				
+				$('#refS1').load('data/php/allRefresh.php?req=1&s-ID=1' + '&f-ID=1' + '&ts=' + d.getTime());
+				$('#refS1').load('data/php/allRefresh.php?req=1&s-ID=2' + '&f-ID=2' + '&ts=' + d.getTime());
+				$('#refS1').load('data/php/allRefresh.php?req=1&s-ID=3' + '&f-ID=3' + '&ts=' + d.getTime());
+				$('#refS1').load('data/php/allRefresh.php?req=1&s-ID=4' + '&f-ID=4' + '&ts=' + d.getTime());
+				$('#refS1').load('data/php/allRefresh.php?req=1&s-ID=5' + '&f-ID=5' + '&ts=' + d.getTime());
+				$('#refS1').load('data/php/allRefresh.php?req=1&s-ID=6' + '&f-ID=6' + '&ts=' + d.getTime());
+				
+			}
+		
+		</script>
+			
+	
+
+		<script type="text/javascript">
+			refresh();
+				var refreshAll = setInterval(refresh, 60000);
+				function refresh(){
+			
+			
+				var d = new Date();
+			
+				$('#ChartS1').load('data/php/charts.php?req=1&s-ID=1' + '&f-ID=1' + '&ts=' + d.getTime());		
+				$('#ChartS2').load('data/php/charts.php?req=1&s-ID=2' + '&f-ID=2' + '&ts=' + d.getTime());	
+				$('#ChartS3').load('data/php/charts.php?req=1&s-ID=3' + '&f-ID=3' + '&ts=' + d.getTime());		
+				$('#ChartS4').load('data/php/charts.php?req=1&s-ID=4' + '&f-ID=4' + '&ts=' + d.getTime());
+				$('#ChartS5').load('data/php/charts.php?req=1&s-ID=5' + '&f-ID=5' + '&ts=' + d.getTime());		
+				$('#ChartS6').load('data/php/charts.php?req=1&s-ID=6' + '&f-ID=6' + '&ts=' + d.getTime());	
+				
+				}	
+			
+		</script>
+	</body>
+</html>
