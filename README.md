@@ -32,6 +32,16 @@ Past using Arduino Mega microcontrollers, the hardware used to build the cycler 
 1. Open the serial monitor located in either the **Tools** navigation menu 
 or by clicking the **Serial Monitor** magifying glass button in the far left
 
+## Imagery
+
+### Cycler Main Unit ###
+
+![cyclerUnit](/cyclerImages/IMG_3157.JPEG)
+
+### Resistor Temperature Test ###
+
+![resistorHot](/cyclerImages/20200616T170155.jpg)
+
 ## Roadmap
 
 After employment had concluded, the project was handed off to an internal GCT engineer team to continue work. This repository will see no further updates.
